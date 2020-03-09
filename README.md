@@ -1,7 +1,4 @@
 # ngx-cytoscape
-nmb-NGX-Cytoscape is some simple bugfixes applied to NGX-Cytoscape.  See PR 
-https://github.com/calvinvette/ngx-cytoscape/pull/1 
-
 NGX-Cytoscape is an Angular 5+ wrapper around the CytoscapeJS 3 module based on original work from Michael Knoch.
 
 This library enables you to add Cytoscape-based graph visualizations into your Angular application, with values
@@ -11,7 +8,13 @@ This fork adds support for the Angular 5 library formats using RollupJS, support
 
 http://js.cytoscape.org
 
+Originally forked from Michael Knoch's repo for Angular 2:
+
 https://github.com/michaelknoch/ng2-cytoscape
+
+Updates also provided to this repo from Nick Bradford - if this fork is out of date check out his:
+
+https://github.com/nmbradford/ngx-cytoscape
 
 
 ## Installation
