@@ -1,5 +1,5 @@
 {
-  "name": "ngx-cytoscape",
+  "name": "nmb-ngx-cytoscape",
   "version": "0.5.23",
   "scripts": {
     "build": "gulp build",
@@ -16,11 +16,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/calvinvette/ngx-cytoscape"
+    "url": "https://github.com/nmbradford/ngx-cytoscape"
   },
   "author": {
-    "name": "Calvin Vette",
-    "email": "calvinvette@gmail.com"
+    "name": "Nick Bradford",
+    "email": "nick@cloud-geek.com"
   },
   "keywords": [
     "angular",
@@ -28,7 +28,7 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/calvinvette/ngx-cytoscape/issues"
+    "url": "https://github.com/nmbradford/ngx-cytoscape/issues"
   },
   "peerDependencies": {
     "@types/cytoscape": "^3.1.6",

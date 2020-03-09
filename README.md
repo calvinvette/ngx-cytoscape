@@ -1,4 +1,6 @@
 # ngx-cytoscape
+nmb-NGX-Cytoscape is some simple bugfixes applied to NGX-Cytoscape.  See PR 
+https://github.com/calvinvette/ngx-cytoscape/pull/1 
 
 NGX-Cytoscape is an Angular 5+ wrapper around the CytoscapeJS 3 module based on original work from Michael Knoch.
 
@@ -153,6 +155,17 @@ Future work will include more support for 3rd party Cytoscape plugins. Currently
 have to get access to the module's exposed "cy" object:
 
 ```typescript
+import { Component, OnInit, ViewChild } from '@angular/core';
+
+// ...
+
+export class MyComponent implements OnInit, ngAfterViewInit {
+
+  // Get reference to the native element cytoscape instance 
+  @ViewChild('cytoscape') cytoscape: any;
+
+  // ...
+
   ngAfterViewInit() {
       if (this.cytograph.cy) {
         const cyLayer = this.cytograph.cy.cyCanvas();

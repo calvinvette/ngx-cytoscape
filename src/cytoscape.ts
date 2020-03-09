@@ -38,7 +38,7 @@ export class CytoscapeComponent implements OnChanges {
             .selector('node')
             .css({
                 'content': 'data(name)',
-                'shape': 'rectangle',
+                'shape': 'data(faveShape)',
                 'text-valign': 'center',
                 'background-color': 'data(faveColor)',
                 'width': '200px',
@@ -89,14 +89,27 @@ export class CytoscapeComponent implements OnChanges {
                 elements: this.elements,
             });
         } else {
-            this.cy.layout = this.layout;
+
+            // Have to stop existing layout instance.
+            let oldlayout = this.cy.LayoutInstance;
+            if ( oldlayout) {
+                oldlayout.stop();
+            }
+
+            // this.cy.layout = this.layout;
             // this.cy.nodes().forEach(node => {
             //     node.remove();
             // });
             this.cy.nodes().remove();
-            this.cy.add(this.elements);
+            let nodes = this.cy.add(this.elements);
             this.cy.minZoom(this.zoom.min);
             this.cy.maxZoom(this.zoom.max);
+
+            // set the current graph elem collection layout to current instance value.
+            let layout = nodes.layout(this.layout);
+
+            // we need to rerun the layout again
+            layout.run();
         }
     }
 
