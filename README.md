@@ -117,7 +117,7 @@ import {Component} from '@angular/core';
           border: solid #21c0c0;
           width: 50em;
         }
-    }`],
+    `],
 })
 export class Graph {
 
